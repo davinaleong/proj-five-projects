@@ -16,9 +16,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 :root {
-  --clr-neutral-100: hsl(210, 12%, 97%);
-  --clr-neutral-200: hsl(192, 15%, 94%);
-
   --clr-action-500: hsl(199, 98%, 48%);
   --clr-action-700: hsl(201, 98%, 41%);
 
@@ -91,6 +88,20 @@ body {
   padding: var(--padding);
 }
 
+a {
+    --link-clr: var(--clr-action-500);
+    --link-clr-hover: var(--clr-action-700);
+    --link-text-decoration: underline;
+
+    color: var(--clr-link);
+    text-decoration: var(--link-text-decoration);
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--link-clr-hover);
+}
+
 .btn {
   --btn-clr: var(--clr-gray-100);
   --btn-bg-clr: var(--clr-action-500);
@@ -130,117 +141,6 @@ body {
   --btn-hover-border-clr: transparent;
 
   --btn-padding: var(--size-100) var(--size-200);
-}
-
-.nav-list {
-  padding: var(--size-200);
-  background-color: var(--clr-gray-100);
-  display: flex;
-  flex-direction: column;
-  border-radius: var(--size-200);
-  box-shadow: 0.1rem 0.1rem 0.3rem 0 hsla(0, 0%, 0%, 0.2);
-}
-
-.nav-list-fixed {
-  position: fixed;
-  top: var(--size-400);
-  left: var(--size-400);
-  z-index: 1;
-}
-
-.nav-list__item {
-  display: flex;
-  gap: var(--size-100);
-  align-items: center;
-}
-
-.card {
-  --width: 22em;
-  width: var(--width);
-  margin-inline: auto;
-  border-radius: var(--size-300);
-  overflow: hidden;
-  box-shadow: 0 0.3em 0.5em 0 rgba(0, 0, 0, 0.2);
-}
-
-.card-header {
-  min-height: 12.5em;
-}
-
-.card-body {
-  color: var(--clr-gray-800);
-  background-color: var(--clr-gray-100);
-  padding: var(--size-500);
-}
-
-.card-title {
-  font-size: var(--fs-500);
-  font-weight: var(--fw-bold);
-}
-
-.profile {
-  --image-size: 3.8em;
-
-  display: grid;
-  grid-template-columns: var(--image-size) auto;
-  gap: 0 var(--size-300);
-  margin-top: var(--size-400);
-  align-items: center;
-}
-
-.profile-image {
-  border-radius: 50%;
-  grid-row: 1 / span 2;
-  overflow: hidden;
-  min-height: var(--image-size);
-}
-
-.profile-image img {
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
-}
-
-.profile-name {
-  font-weight: var(--fw-bold);
-  line-height: 1;
-}
-
-.profile-date {
-  color: var(--clr-gray-400);
-  line-height: 1;
-}
-
-small {
-  font-size: var(--fs-300);
-}
-
-[data-animated-bg] {
-  background-image: linear-gradient(
-    to right,
-    var(--clr-neutral-100) 0%,
-    var(--clr-neutral-200) 10%,
-    var(--clr-neutral-100) 20%,
-    var(--clr-neutral-100) 100%
-  );
-  background-size: 200% 300%;
-  animation: bg-pos 1s linear infinite;
-}
-
-@keyframes bg-pos {
-  0% {
-    background-position: 50% 0;
-  }
-
-  100% {
-    background-position: -150% 0;
-  }
-}
-
-[data-animated-text] {
-  display: inline-block;
-  border-radius: 100vmax;
-  width: 100%;
-  height: var(--size-400);
 }
 
 /** Content - End **/

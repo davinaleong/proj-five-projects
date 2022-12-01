@@ -13,8 +13,6 @@
 */
 
 /** Root **/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
 :root {
   --clr-neutral-100: hsl(210, 12%, 97%);
   --clr-neutral-200: hsl(192, 15%, 94%);
