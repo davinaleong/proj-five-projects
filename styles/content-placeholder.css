@@ -17,8 +17,8 @@
   --clr-neutral-100: hsl(210, 12%, 97%);
   --clr-neutral-200: hsl(192, 15%, 94%);
 
-  --clr-action-500: hsl(199, 98%, 48%);
-  --clr-action-700: hsl(201, 98%, 41%);
+  --clr-action-500: hsl(208, 79%, 51%);
+  --clr-action-700: hsl(210, 79%, 46%);
 
   --clr-gray-100: hsl(0, 0%, 100%);
   --clr-gray-200: hsl(0, 0%, 90%);
@@ -110,6 +110,7 @@ body {
   padding: var(--btn-padding);
   transition: all 0.3s ease-in-out;
   text-decoration: none;
+  border-radius: var(--size-100);
 }
 
 .btn:where(:hover, :focus, :focus-visible) {
@@ -130,26 +131,12 @@ body {
   --btn-padding: var(--size-100) var(--size-200);
 }
 
-.nav-list {
-  padding: var(--size-200);
-  background-color: var(--clr-gray-100);
-  display: flex;
-  flex-direction: column;
-  border-radius: var(--size-200);
-  box-shadow: 0.1rem 0.1rem 0.3rem 0 hsla(0, 0%, 0%, 0.2);
-}
-
-.nav-list-fixed {
+.btn-fixed {
   position: fixed;
   top: var(--size-400);
-  left: var(--size-400);
+  right: var(--size-400);
   z-index: 1;
-}
-
-.nav-list__item {
-  display: flex;
-  gap: var(--size-100);
-  align-items: center;
+  box-shadow: 0.2rem 0.2rem 0.3rem 0 hsla(0, 0%, 0%, 0.2);
 }
 
 .card {

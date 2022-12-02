@@ -16,20 +16,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 :root {
-  --clr-action-500: hsl(199, 98%, 48%);
-  --clr-action-700: hsl(201, 98%, 41%);
+  --clr-action-500: hsl(208, 79%, 51%);
+  --clr-action-700: hsl(210, 79%, 46%);
 
-  --clr-gray-100: hsl(0, 0%, 100%);
-  --clr-gray-200: hsl(0, 0%, 90%);
-  --clr-gray-300: hsl(0, 0%, 80%);
-  --clr-gray-400: hsl(0, 0%, 70%);
-  --clr-gray-500: hsl(0, 0%, 60%);
-  --clr-gray-600: hsl(0, 0%, 50%);
-  --clr-gray-700: hsl(0, 0%, 40%);
-  --clr-gray-800: hsl(0, 0%, 30%);
-  --clr-gray-900: hsl(0, 0%, 20%);
-  --clr-gray-1000: hsl(0, 0%, 10%);
-  --clr-gray-1100: hsl(0, 0%, 0%);
+  --clr-gray-50: hsl(0, 0%, 100%);
+  --clr-gray-100: hsl(0, 0%, 90%);
+  --clr-gray-200: hsl(0, 0%, 80%);
+  --clr-gray-300: hsl(0, 0%, 70%);
+  --clr-gray-400: hsl(0, 0%, 60%);
+  --clr-gray-500: hsl(0, 0%, 50%);
+  --clr-gray-600: hsl(0, 0%, 40%);
+  --clr-gray-700: hsl(0, 0%, 30%);
+  --clr-gray-800: hsl(0, 0%, 20%);
+  --clr-gray-900: hsl(0, 0%, 10%);
+  --clr-gray-1000: hsl(0, 0%, 0%);
 
   --ff-primary: "Roboto", Arial, sans-serif;
   --ff-body: var(--ff-primary);
@@ -69,45 +69,40 @@ body {
   font-family: var(--ff-body);
   font-size: var(--fs-base);
   font-weight: var(--fw-regular);
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  min-height: 100vh;
 }
 
 /** Content - General Styling **/
 .container {
   --width: 69em;
-  --padding: var(--size-400);
+  --container-spacer: var(--size-400);
 
-  width: min(var(--width), calc(100% - (var(--padding) * 2)));
+  width: min(var(--width), calc(100% - (var(--container-spacer) * 2)));
   margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: var(--size-400);
-  padding: var(--padding);
 }
 
-a {
-    --link-clr: var(--clr-action-500);
-    --link-clr-hover: var(--clr-action-700);
-    --link-text-decoration: underline;
+.a {
+  --link-clr: var(--clr-action-500);
+  --link-clr-hover: var(--clr-action-700);
+  --link-text-decoration: underline;
 
-    color: var(--clr-link);
-    text-decoration: var(--link-text-decoration);
-    transition: color 0.3s ease-in-out;
+  color: var(--clr-link);
+  text-decoration: var(--link-text-decoration);
+  transition: color 0.3s ease-in-out;
 }
 
-a:hover {
-    color: var(--link-clr-hover);
+.a:hover {
+  color: var(--link-clr-hover);
 }
 
 .btn {
-  --btn-clr: var(--clr-gray-100);
+  --btn-clr: var(--clr-gray-50);
   --btn-bg-clr: var(--clr-action-500);
   --btn-border-clr: var(--clr-action-500);
 
-  --btn-hover-clr: var(--clr-gray-100);
+  --btn-hover-clr: var(--clr-gray-50);
   --btn-hover-bg-clr: var(--clr-action-700);
   --btn-hover-border-clr: var(--clr-action-700);
 
@@ -140,7 +135,40 @@ a:hover {
   --btn-hover-bg-clr: transparent;
   --btn-hover-border-clr: transparent;
 
-  --btn-padding: var(--size-100) var(--size-200);
+  --btn-padding: var(--size-100) 0;
+}
+
+.btn-icon {
+  --btn-clr: var(--clr-gray-50);
+  --btn-bg-clr: var(--clr-action-500);
+  --btn-border-clr: var(--clr-action-500);
+
+  --btn-hover-clr: var(--clr-gray-50);
+  --btn-hover-bg-clr: var(--clr-action-700);
+  --btn-hover-border-clr: var(--clr-action-700);
+
+  --btn-padding: var(--size-200);
+
+  font-size: var(--size-600);
+  border-radius: 50%;
+}
+
+.btn-fixed {
+  position: fixed;
+  top: var(--size-400);
+  right: var(--size-400);
+  z-index: 1;
+  box-shadow: 0.2rem 0.2rem 0.3rem 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.nav-list {
+  margin-left: var(--size-500);
+}
+
+.nav-list__item__content {
+  display: flex;
+  gap: var(--size-200);
+  align-items: center;
 }
 
 /** Content - End **/
@@ -159,12 +187,16 @@ a:hover {
 }
 
 /** Utility - Colours **/
-.text-neutral-100 {
-  color: var(--clr-neutral-100);
+.text-action-500 {
+  color: var(--clr-action-500);
 }
 
-.text-neutral-200 {
-  color: var(--clr-neutral-200);
+.text-action-700 {
+  color: var(--clr-action-700);
+}
+
+.text-gray-50 {
+  color: var(--clr-gray-50);
 }
 
 .text-gray-100 {
@@ -212,12 +244,16 @@ a:hover {
 }
 
 /** Utility - Background Colours **/
-.bg-neutral-100 {
-  background-color: var(--clr-neutral-100);
+.bg-action-500 {
+  background-color: var(--clr-action-500);
 }
 
-.bg-neutral-200 {
-  background-color: var(--clr-neutral-200);
+.bg-action-700 {
+  background-color: var(--clr-action-700);
+}
+
+.bg-gray-50 {
+  background-color: var(--clr-gray-50);
 }
 
 .bg-gray-100 {
