@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>5 Projects - Random Choice Picker</title>
+
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/random-choice-picker.css" />
+    <script type="module" src="./scripts/random-choice-picker.js"></script>
+  </head>
+  <body class="text-neutral-100 bg-primary-400">
+    <a href="./index.html" class="btn btn-fixed">Back</a>
+
+    <h1 class="visually-hidden">Random Choice Picker</h1>
+
+    <main class="container">
+      <h2 class="text-center fs-500">
+        Enter all choices separated by a comma (,).<br />Press enter when done.
+      </h2>
+
+      <textarea
+        name="values"
+        cols="30"
+        rows="6"
+        class="form-field"
+        placeholder="Choices here..."
+      ></textarea>
+
+      <div class="tags" data-tags></div>
+    </main>
+  </body>
+</html>
