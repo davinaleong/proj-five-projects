@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>5 Projects - Live User Filter</title>
+
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/live-user-filter.css" />
+    <script type="module" src="./scripts/live-user-filter.js"></script>
+  </head>
+  <body class="bg-neutral-200">
+    <a href="./index.html" class="btn btn-fixed">Back</a>
+
+    <h1 class="visually-hidden">Live User Filter</h1>
+
+    <main class="container">
+      <header class="primary-header">
+        <h2 class="filter-heading">Live User Filter</h2>
+        <label class="filter-label" for="filter"
+          >Search by name and/or location</label
+        >
+        <input
+          type="text"
+          name="filter"
+          class="filter-input"
+          id="filter"
+          placeholder="Search..."
+        />
+      </header>
+      <ul class="user-list" role="list" data-user-list>
+        <li class="user-list-item">
+          <h3 class="user-loading">Loading&hellip;</h3>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
